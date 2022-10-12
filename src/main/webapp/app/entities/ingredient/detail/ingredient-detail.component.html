@@ -1,0 +1,46 @@
+<div class="d-flex justify-content-center">
+  <div class="col-8">
+    <div *ngIf="ingredient">
+      <h2 data-cy="ingredientDetailsHeading"><span jhiTranslate="pizzaMarioApplicationApp.ingredient.detail.title">Ingredient</span></h2>
+
+      <hr />
+
+      <jhi-alert-error></jhi-alert-error>
+
+      <jhi-alert></jhi-alert>
+
+      <dl class="row-md jh-entity-details">
+        <dt><span jhiTranslate="global.field.id">ID</span></dt>
+        <dd>
+          <span>{{ ingredient.id }}</span>
+        </dd>
+        <dt><span jhiTranslate="pizzaMarioApplicationApp.ingredient.nom">Nom</span></dt>
+        <dd>
+          <span>{{ ingredient.nom }}</span>
+        </dd>
+        <dt><span jhiTranslate="pizzaMarioApplicationApp.ingredient.quantite">Quantite</span></dt>
+        <dd>
+          <span>{{ ingredient.quantite }}</span>
+        </dd>
+        <dt><span jhiTranslate="pizzaMarioApplicationApp.ingredient.prix">Prix</span></dt>
+        <dd>
+          <span>{{ ingredient.prix }}</span>
+        </dd>
+        <dt><span jhiTranslate="pizzaMarioApplicationApp.ingredient.pizza">Pizza</span></dt>
+        <dd>
+          <div *ngIf="ingredient.pizza">
+            <a [routerLink]="['/pizza', ingredient.pizza.id, 'view']">{{ ingredient.pizza.id }}</a>
+          </div>
+        </dd>
+      </dl>
+
+      <button type="submit" (click)="previousState()" class="btn btn-info" data-cy="entityDetailsBackButton">
+        <fa-icon icon="arrow-left"></fa-icon>&nbsp;<span jhiTranslate="entity.action.back">Retour</span>
+      </button>
+
+      <button type="button" [routerLink]="['/ingredient', ingredient.id, 'edit']" class="btn btn-primary">
+        <fa-icon icon="pencil-alt"></fa-icon>&nbsp;<span jhiTranslate="entity.action.edit">Editer</span>
+      </button>
+    </div>
+  </div>
+</div>

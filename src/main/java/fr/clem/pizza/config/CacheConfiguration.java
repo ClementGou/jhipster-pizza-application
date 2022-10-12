@@ -51,6 +51,14 @@ public class CacheConfiguration {
             createCache(cm, fr.clem.pizza.domain.User.class.getName());
             createCache(cm, fr.clem.pizza.domain.Authority.class.getName());
             createCache(cm, fr.clem.pizza.domain.User.class.getName() + ".authorities");
+            createCache(cm, fr.clem.pizza.domain.Pizza.class.getName());
+            createCache(cm, fr.clem.pizza.domain.Pizza.class.getName() + ".ingredients");
+            createCache(cm, fr.clem.pizza.domain.Pizza.class.getName() + ".clients");
+            createCache(cm, fr.clem.pizza.domain.Ingredient.class.getName());
+            createCache(cm, fr.clem.pizza.domain.Client.class.getName());
+            createCache(cm, fr.clem.pizza.domain.Client.class.getName() + ".commandes");
+            createCache(cm, fr.clem.pizza.domain.Commande.class.getName());
+            createCache(cm, fr.clem.pizza.domain.Commande.class.getName() + ".pizzas");
             // jhipster-needle-ehcache-add-entry
         };
     }

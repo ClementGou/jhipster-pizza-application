@@ -1,0 +1,43 @@
+{
+  "applications": "*",
+  "changelogDate": "20221012142410",
+  "dto": "no",
+  "embedded": false,
+  "entityTableName": "pizza",
+  "fields": [
+    {
+      "fieldName": "nom",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "prix",
+      "fieldType": "Double"
+    }
+  ],
+  "fluentMethods": true,
+  "jpaMetamodelFiltering": false,
+  "name": "Pizza",
+  "pagination": "no",
+  "readOnly": false,
+  "relationships": [
+    {
+      "otherEntityName": "ingredient",
+      "otherEntityRelationshipName": "pizza",
+      "relationshipName": "ingredient",
+      "relationshipType": "one-to-many"
+    },
+    {
+      "otherEntityName": "client",
+      "otherEntityRelationshipName": "pizza",
+      "relationshipName": "client",
+      "relationshipType": "one-to-many"
+    },
+    {
+      "otherEntityName": "commande",
+      "otherEntityRelationshipName": "pizza",
+      "relationshipName": "commandes",
+      "relationshipType": "many-to-one"
+    }
+  ],
+  "service": "no"
+}
