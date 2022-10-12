@@ -1,0 +1,28 @@
+{
+  "pizzaMarioApplicationApp": {
+    "pizza": {
+      "home": {
+        "title": "Pizzas",
+        "refreshListLabel": "Refresh list",
+        "createLabel": "Create a new Pizza",
+        "createOrEditLabel": "Create or edit a Pizza",
+        "notFound": "No Pizzas found"
+      },
+      "created": "A new Pizza is created with identifier {{ param }}",
+      "updated": "A Pizza is updated with identifier {{ param }}",
+      "deleted": "A Pizza is deleted with identifier {{ param }}",
+      "delete": {
+        "question": "Are you sure you want to delete Pizza {{ id }}?"
+      },
+      "detail": {
+        "title": "Pizza"
+      },
+      "id": "ID",
+      "nom": "Nom",
+      "prix": "Prix",
+      "ingredient": "Ingredient",
+      "client": "Client",
+      "commandes": "Commandes"
+    }
+  }
+}

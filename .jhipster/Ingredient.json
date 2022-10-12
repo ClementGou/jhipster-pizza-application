@@ -1,0 +1,35 @@
+{
+  "applications": "*",
+  "changelogDate": "20221012142411",
+  "dto": "no",
+  "embedded": false,
+  "entityTableName": "ingredient",
+  "fields": [
+    {
+      "fieldName": "nom",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "quantite",
+      "fieldType": "Double"
+    },
+    {
+      "fieldName": "prix",
+      "fieldType": "Double"
+    }
+  ],
+  "fluentMethods": true,
+  "jpaMetamodelFiltering": false,
+  "name": "Ingredient",
+  "pagination": "no",
+  "readOnly": false,
+  "relationships": [
+    {
+      "otherEntityName": "pizza",
+      "otherEntityRelationshipName": "ingredient",
+      "relationshipName": "pizza",
+      "relationshipType": "many-to-one"
+    }
+  ],
+  "service": "no"
+}

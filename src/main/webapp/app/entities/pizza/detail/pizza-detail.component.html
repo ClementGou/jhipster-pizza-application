@@ -1,0 +1,42 @@
+<div class="d-flex justify-content-center">
+  <div class="col-8">
+    <div *ngIf="pizza">
+      <h2 data-cy="pizzaDetailsHeading"><span jhiTranslate="pizzaMarioApplicationApp.pizza.detail.title">Pizza</span></h2>
+
+      <hr />
+
+      <jhi-alert-error></jhi-alert-error>
+
+      <jhi-alert></jhi-alert>
+
+      <dl class="row-md jh-entity-details">
+        <dt><span jhiTranslate="global.field.id">ID</span></dt>
+        <dd>
+          <span>{{ pizza.id }}</span>
+        </dd>
+        <dt><span jhiTranslate="pizzaMarioApplicationApp.pizza.nom">Nom</span></dt>
+        <dd>
+          <span>{{ pizza.nom }}</span>
+        </dd>
+        <dt><span jhiTranslate="pizzaMarioApplicationApp.pizza.prix">Prix</span></dt>
+        <dd>
+          <span>{{ pizza.prix }}</span>
+        </dd>
+        <dt><span jhiTranslate="pizzaMarioApplicationApp.pizza.commandes">Commandes</span></dt>
+        <dd>
+          <div *ngIf="pizza.commandes">
+            <a [routerLink]="['/commande', pizza.commandes.id, 'view']">{{ pizza.commandes.id }}</a>
+          </div>
+        </dd>
+      </dl>
+
+      <button type="submit" (click)="previousState()" class="btn btn-info" data-cy="entityDetailsBackButton">
+        <fa-icon icon="arrow-left"></fa-icon>&nbsp;<span jhiTranslate="entity.action.back">Retour</span>
+      </button>
+
+      <button type="button" [routerLink]="['/pizza', pizza.id, 'edit']" class="btn btn-primary">
+        <fa-icon icon="pencil-alt"></fa-icon>&nbsp;<span jhiTranslate="entity.action.edit">Editer</span>
+      </button>
+    </div>
+  </div>
+</div>
