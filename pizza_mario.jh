@@ -1,0 +1,39 @@
+
+entity Pizza {
+	nom String
+    prix Double
+}
+
+entity Ingredient {
+  nom String
+  quantite Double
+  prix Double
+}
+
+entity Client {
+  nom String
+  numeroTelephone String
+  email String
+}
+
+entity Commande {
+	estAEmporter Boolean
+    dateHeureCreation Instant
+    dateHeureLivraison Instant
+}
+
+relationship OneToMany {
+	Pizza to Ingredient
+}
+
+relationship OneToMany {
+	Pizza to Client
+}
+
+relationship ManyToOne {
+	Commande to Client
+}
+
+relationship OneToMany {
+	Commande to Pizza{commandes}
+}
